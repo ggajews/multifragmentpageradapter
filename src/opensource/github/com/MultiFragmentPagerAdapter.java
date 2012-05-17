@@ -4,51 +4,38 @@ import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 public class MultiFragmentPagerAdapter extends PagerAdapter {
 
-	  @Override
-	  public int getCount() {
-	   return 0;
-	  }
+  @Override
+  public int getCount() {
+    // TODO Auto-generated method stub
+    return 0;
+  }
 
-	  
-	  @Override
-	  public Object instantiateItem(View collection, int position) {
-		// TODO Auto-generated method stub
-        return null;
-	  }
+  @Override
+  public void destroyItem(ViewGroup container, int position, Object object) {
+    // TODO Auto-generated method stub
+    super.destroyItem(container, position, object);
+  }
 
-	  @Override
-	  public void destroyItem(View collection, int position, Object view) {
-	   ((ViewPager) collection).removeView((LinearLayout) view);
-	  }
+  @Override
+  public Object instantiateItem(ViewGroup container, int position) {
+    // TODO Auto-generated method stub
+    return super.instantiateItem(container, position);
+  }
 
-	  @Override
-	  public boolean isViewFromObject(View view, Object object) {
-	   return view == ((LinearLayout) object);
-	  }
+  @Override
+  public void finishUpdate(ViewGroup container) {
+    // TODO Auto-generated method stub
+    super.finishUpdate(container);
+  }
 
-	  @Override
-	  public void finishUpdate(View arg0) {
-	  }
-
-	  @Override
-	  public Parcelable saveState() {
-	   return null;
-	  }
-
-	  @Override
-	  public void startUpdate(View arg0) {
-	  }
-
-	  @Override
-	  public void restoreState(Parcelable arg0, ClassLoader arg1) {
-	   // TODO Auto-generated method stub
-
-	  }
-
-	 
-
+  @Override
+  public boolean isViewFromObject(View arg0, Object arg1) {
+    // TODO Auto-generated method stub
+    return false;
+  }
 }
